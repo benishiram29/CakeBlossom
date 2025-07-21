@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Cake Blossom</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Cake Blossom 🍰</h1>
+    </header>
+
+  <!-- Hamburger Button -->
+<div class="hamburger" onclick="toggleMenu()">
+  ☰
+</div>
+
+
+<div id="overlay" onclick="closeMenu()"></div>
+<!-- Navigation Menu -->
+<nav id="navMenu">
+  <a href="#home">Home</a>
+  <a href="#cakes">Our Cakes</a>
+  <a href="#shop">Shop</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<<script>
+  function toggleMenu() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.toggle("show");
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function closeMenu() {
+    const navMenu = document.getElementById("navMenu");
+    navMenu.classList.remove("show");
+    document.getElementById("overlay").style.display = "none";
+  }
+
+  // ❌ Remove this — unnecessary auto toggle on page load
+  // const nav = document.querySelector("nav");
+  // nav.classList.toggle("show");
+
+  // 🔘 Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    const navMenu = document.getElementById("navMenu");
+    if (!navMenu.contains(event.target) && !event.target.classList.contains("hamburger")) {
+      closeMenu();
+    }
+  });
+
+  // ✅ Close menu when any nav link is clicked
+  document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+</script>
+
+
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <h2>Custom Cakes Made with Love 💕</h2>
+      <a class="btn" href="#shop">Shop Now</a>
+    </section>
+
+    <!-- Featured Cakes Section -->
+    <div class="cakesection">
+      <div class="shop-body">
+        <section class="section" id="cakes">
+          <h2>Our Cakes</h2>
+          <div class="products">
+            <div class="product">
+              <img src="cake 1.jpg" alt="Cake 1" />
+              <p>
+                Rich chocolate indulgence layered with vanilla cream, perfect
+                for sweet celebrations.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 2.jpg" alt="Cake 2" />
+              <p>
+                Gracefully designed floral cake, a stunning centerpiece for any
+                elegant event.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 3.jpeg" alt="Cake 3" />
+              <p>
+                Classic white frosting with soft roses – simplicity meets
+                sophistication.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 4.jpeg" alt="Cake 4" />
+              <p>
+                Peach-pink elegance with silky smooth buttercream – ideal for
+                anniversaries.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 5.jpeg" alt="Cake 5" />
+              <p>
+                Decadent layers of chocolate and vanilla topped with delicate
+                cream art.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 6.jpeg" alt="Cake 6" />
+              <p>
+                Charming floral cake with pastel tones, designed for dreamy
+                celebrations.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 7.jpeg" alt="Cake 7" />
+              <p>
+                Golden glow and elegant florals – this cake is pure royalty on a
+                plate.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 8.jpeg" alt="Cake 8" />
+              <p>
+                Bright and cheerful cake for birthdays that deserve joyful
+                sweetness.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 9.jpeg" alt="Cake 9" />
+              <p>
+                Soft sponge, rich layers, and artistic finishing – a treat for
+                all senses.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 10.jpeg" alt="Cake 10" />
+              <p>
+                Layered love with pastel elegance – a favorite for bridal
+                showers.
+              </p>
+            </div>
+            <div class="product">
+              <img src="cake 11.jpeg" alt="Cake 11" />
+              <p>
+                Choco-vanilla fantasy with creamy swirls and smooth textures.
+              </p>
+            </div>
+            <div class="product">
+              <img src="12.jpeg" alt="Cake 12" />
+              <p>
+                Whimsical florals on soft frosting – gentle, sweet, and
+                unforgettable.
+              </p>
+            </div>
+            <div class="product">
+              <img src="13.jpeg" alt="Cake 13" />
+              <p>
+                Bright blossoms over a moist base – freshness and flavor in
+                every bite.
+              </p>
+            </div>
+            <div class="product">
+              <img src="14.jpeg" alt="Cake 14" />
+              <p>
+                Elegant lilac accents and soft cream – a picture-perfect dessert
+                delight.
+              </p>
+            </div>
+            <div class="product">
+              <img src="15.jpeg" alt="Cake 15" />
+              <p>
+                Layered chocolate delight with smooth vanilla richness – a
+                timeless classic.
+              </p>
+            </div>
+            <div class="product">
+              <img src="16.jpeg" alt="Cake 16" />
+              <p>
+                Sunset-toned florals and flawless finish – a cake that speaks
+                celebration.
+              </p>
+            </div>
+            <div class="product">
+              <img src="17.jpeg" alt="Cake 17" />
+              <p>
+                Soft color palette with floral elegance – delicate and
+                delightful.
+              </p>
+            </div>
+            <div class="product">
+              <img src="18.jpeg" alt="Cake 18" />
+              <p>
+                Royal purple design on vanilla layers – stylish and satisfying.
+              </p>
+            </div>
+            <div class="product">
+              <img src="19.jpeg" alt="Cake 19" />
+              <p>
+                Fine roses, subtle tones – an ideal gift of flavor and elegance.
+              </p>
+            </div>
+            <div class="product">
+              <img src="20.jpeg" alt="Cake 20" />
+              <p>
+                Every slice a surprise – beautifully frosted for special
+                memories.
+              </p>
+            </div>
+            <div class="product">
+              <img src="21.jpeg" alt="Cake 21" />
+              <p>Blooming roses and velvety texture – love at first bite!</p>
+            </div>
+            <div class="product">
+              <img src="22.jpeg" alt="Cake 22" />
+              <p>
+                Heavenly smooth frosting with a modern floral twist – elegance
+                in every layer.
+              </p>
+            </div>
+            <div class="product">
+              <img src="23.jpeg" alt="Cake 23" />
+              <p>Stylish and sweet with a golden touch – made to impress.</p>
+            </div>
+            <div class="product">
+              <img src="24.jpeg" alt="Cake 24" />
+              <p>
+                Soft cream, blooming flowers – beauty and flavor combined
+                perfectly.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Order Form Section -->
+    <div class="shopsection">
+      <div class="shop-body">
+        <section class="section" id="shop">
+          <h2>Our Cakes Price Range</h2>
+          <div class="products">
+            <div class="product">
+              <img src="1 pond.jpeg" alt="1 Pond Cake" />
+              <h3>1 Pond Cakes</h3>
+              <p>1 Pound (2 layers): Rs. 1500</p>
+            </div>
+
+            <div class="product">
+              <img src="2 pond.jpeg" alt="2 Pond Cake" />
+              <h3>2 Pond Cakes</h3>
+              <p>2 Pound (2 layers): Rs. 2500</p>
+            </div>
+
+            <div class="product">
+              <img src="3 pond.jpeg" alt="3 Pond Cake" />
+              <h3>3 Pond Cakes</h3>
+              <p>3 Pound (2 layers): Rs. 3500</p>
+            </div>
+
+            <div class="product">
+              <img src="layers.jpeg" alt="extra layers" />
+              <h3>Extra Layers Price</h3>
+              <p>Extra Layer Price: 300</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Customize Your Cake</h2>
+
+          <form
+            id="cakeOrderForm"
+            action="https://formsubmit.co/infoCakeBlossom@gmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <!-- FormSubmit Setup -->
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="box" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="🎂 New Cake Order for Cake Blossom!"
+            />
+            <input type="hidden" name="_next" value="index.html" />
+            <input type="hidden" id="cakeSummaryField" name="Cake Summary" />
+            <input type="hidden" id="billSummaryField" name="Bill Summary" />
+
+            <!-- 🍰 Cake Info -->
+            <div id="cake-section-container">
+              <div class="form-box cake-box">
+                <h3>Cake Details</h3>
+
+                <label>Choose Cake Flavor:</label>
+                <select name="flavor" required>
+                  <option value="">--Select--</option>
+                  <option value="chocolate">Chocolate</option>
+                  <option value="vanilla">Vanilla</option>
+                  <option value="red velvet">Red Velvet</option>
+                </select>
+
+                <label>Choose Size:</label>
+                <select name="size" required>
+                  <option value="">--Select--</option>
+                  <option value="1 pound">1 Pound</option>
+                  <option value="2 pound">2 Pound</option>
+                  <option value="3 pound">3 Pound</option>
+                </select>
+
+                <label>Number of Layers:</label>
+                <input type="number" name="layers" min="1" max="5" required />
+
+                <label>Theme of Cake:</label>
+                <input
+                  type="text"
+                  name="theme"
+                  placeholder="e.g. Floral, Cartoon, Minimalist"
+                  required
+                />
+
+                <img
+                  id="previewImage"
+                  src=""
+                  alt="Preview"
+                  style="
+                    display: none;
+                    margin-top: 10px;
+                    max-width: 200px;
+                    border: 2px dashed #ccc;
+                    border-radius: 8px;
+                  "
+                />
+
+                <label>Message on Cake:</label>
+                <input type="text" name="message" maxlength="40" />
+
+                <label>Delivery Date:</label>
+                <input type="date" name="delivery" id="deliveryDate" required />
+
+                <label>Delivery Time:</label>
+                <input
+                  type="time"
+                  name="deliveryTime"
+                  id="deliveryTime"
+                  required
+                />
+              </div>
+            </div>
+            <script>
+              // ✅ Disable past dates
+              const dateInput = document.getElementById("deliveryDate");
+              const today = new Date().toISOString().split("T")[0];
+              dateInput.min = today;
+
+              // ✅ Validate time between 12 PM to 12 AM
+              const timeInput = document.getElementById("deliveryTime");
+
+              timeInput.addEventListener("change", function () {
+                const selectedTime = this.value;
+                const [hour, minute] = selectedTime.split(":").map(Number);
+
+                // Allow only 12:00 (PM) to 23:59 (11:59 PM)
+                if (hour < 12 || hour > 23) {
+                  alert("Delivery time must be between 12:00 PM to 11:59 PM.");
+                  this.value = ""; // clear invalid value
+                }
+              });
+            </script>
+
+            <button type="button" id="addCakeBtn" class="btn">
+              Add More Cake
+            </button>
+            <!--custom Cake Order Submission-->
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const form = document.getElementById("cakeOrderForm");
+                const cakeContainer = document.getElementById(
+                  "cake-section-container"
+                );
+                const addCakeBtn = document.getElementById("addCakeBtn");
+                const confirmationMessage = document.getElementById(
+                  "confirmationMessage"
+                );
+
+                const basePriceSpan = document.getElementById("basePrice");
+                const layerPriceSpan = document.getElementById("layerPrice");
+                const totalPriceSpan = document.getElementById("totalPrice");
+
+                const pricePerSize = {
+                  "1 pound": 1500,
+                  "2 pound": 2500,
+                  "3 pound": 3500,
+                };
+                const pricePerExtraLayer = 300;
+
+                function calculateAllBills() {
+                  let totalBase = 0;
+                  let totalLayers = 0;
+
+                  const cakeBoxes = cakeContainer.querySelectorAll(".cake-box");
+
+                  cakeBoxes.forEach((box) => {
+                    const size = box.querySelector('[name="size"]').value;
+                    const layers =
+                      parseInt(box.querySelector('[name="layers"]').value) || 1;
+
+                    const base = pricePerSize[size] || 0;
+                    const layerCharge =
+                      layers >= 3 ? (layers - 2) * pricePerExtraLayer : 0;
+
+                    totalBase += base;
+                    totalLayers += layerCharge;
+                  });
+
+                  const total = totalBase + totalLayers;
+                  basePriceSpan.textContent = totalBase;
+                  layerPriceSpan.textContent = totalLayers;
+                  totalPriceSpan.textContent = total;
+
+                  return total;
+                }
+
+                // Event Listener for Add More Cake
+                addCakeBtn.addEventListener("click", () => {
+                  const firstCakeBox = cakeContainer.querySelector(".cake-box");
+                  const newCakeBox = firstCakeBox.cloneNode(true);
+
+                  // Reset values in new form
+                  newCakeBox
+                    .querySelectorAll("input, select")
+                    .forEach((input) => {
+                      input.value = "";
+                    });
+
+                  // Create and append remove button
+                  const removeBtn = document.createElement("button");
+                  removeBtn.textContent = "Remove This Cake";
+                  removeBtn.className = "btn remove-cake-btn";
+                  removeBtn.style.marginTop = "10px";
+                  removeBtn.style.backgroundColor = "#e74c3c";
+
+                  removeBtn.addEventListener("click", () => {
+                    const previousBox = newCakeBox.previousElementSibling;
+
+                    // Agar koi previous cake box hai, to scroll karo us par
+                    if (
+                      previousBox &&
+                      previousBox.classList.contains("cake-box")
+                    ) {
+                      previousBox.scrollIntoView({ behavior: "smooth" });
+                    }
+
+                    // Phir current cake box remove karo
+                    newCakeBox.remove();
+                    calculateAllBills();
+                  });
+
+                  newCakeBox.appendChild(removeBtn);
+                  cakeContainer.appendChild(newCakeBox);
+                  newCakeBox.scrollIntoView({ behavior: "smooth" });
+
+                  attachChangeListeners(newCakeBox);
+                });
+                // Attach change listeners to inputs and selects
+                function attachChangeListeners(box) {
+                  const selects = box.querySelectorAll("select");
+                  const inputs = box.querySelectorAll("input");
+
+                  selects.forEach((select) => {
+                    select.addEventListener("change", calculateAllBills);
+                  });
+                  inputs.forEach((input) => {
+                    input.addEventListener("input", calculateAllBills);
+                  });
+                }
+
+                // Attach to initial box
+                attachChangeListeners(cakeContainer.querySelector(".cake-box"));
+
+                // 🌟 Custom Form Validation
+                function validateForm() {
+                  let isValid = true;
+                  let messages = [];
+
+                  const name = form.querySelector('[name="name"]').value.trim();
+                  const phone = form
+                    .querySelector('[name="phone"]')
+                    .value.trim();
+                  const email = form
+                    .querySelector('[name="email"]')
+                    .value.trim();
+                  const address = form
+                    .querySelector('[name="address"]')
+                    .value.trim();
+                  const payerName = document
+                    .getElementById("payerName")
+                    .value.trim();
+                  const receiptFile =
+                    document.getElementById("receiptUpload").files[0];
+
+                  // 🧁 Validate each cake box
+                  const cakeBoxes = cakeContainer.querySelectorAll(".cake-box");
+                  cakeBoxes.forEach((box, i) => {
+                    const flavor = box.querySelector('[name="flavor"]').value;
+                    const size = box.querySelector('[name="size"]').value;
+                    const layers = box.querySelector('[name="layers"]').value;
+                    const theme = box.querySelector('[name="theme"]').value;
+                    const delivery =
+                      box.querySelector('[name="delivery"]').value;
+                    const deliveryTime = box.querySelector(
+                      '[name="deliveryTime"]'
+                    ).value;
+
+                    if (
+                      !flavor ||
+                      !size ||
+                      !layers ||
+                      !theme ||
+                      !delivery ||
+                      !deliveryTime
+                    ) {
+                      isValid = false;
+                      messages.push(
+                        `Please complete all fields for Cake ${i + 1}.`
+                      );
+                    }
+                  });
+
+                  // 👤 Validate customer info
+                  if (!name || !phone || !email || !address) {
+                    isValid = false;
+                    messages.push(
+                      "Please complete all customer information fields."
+                    );
+                  }
+
+                  if (!/^\d{11}$/.test(phone)) {
+                    isValid = false;
+                    messages.push(
+                      "Phone number must be 11 digits (e.g. 03XXXXXXXXX)."
+                    );
+                  }
+
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  if (!emailRegex.test(email)) {
+                    isValid = false;
+                    messages.push("Please enter a valid email address.");
+                  }
+
+                  // 💳 Payment Validation
+                  if (!payerName) {
+                    isValid = false;
+                    messages.push(
+                      "Please enter your account title (payer name)."
+                    );
+                  }
+
+                  if (!receiptFile) {
+                    isValid = false;
+                    messages.push("Please upload your payment receipt.");
+                  } else {
+                    const allowedTypes = [
+                      "image/jpeg",
+                      "image/png",
+                      "application/pdf",
+                    ];
+                    if (!allowedTypes.includes(receiptFile.type)) {
+                      isValid = false;
+                      messages.push(
+                        "Receipt must be an image (JPG/PNG) or PDF."
+                      );
+                    }
+                  }
+
+                  // ✅ Final decision
+                  if (!isValid) {
+                    alert(messages.join("\n"));
+                  }
+
+                  return isValid;
+                }
+
+                // Submit Handler
+                form.addEventListener("submit", function (e) {
+                  e.preventDefault();
+                  if (!validateForm()) return;
+
+                  const cakeBoxes = cakeContainer.querySelectorAll(".cake-box");
+                  const cakeSummaries = [];
+
+                  cakeBoxes.forEach((box, i) => {
+                    const flavor = box.querySelector('[name="flavor"]').value;
+                    const size = box.querySelector('[name="size"]').value;
+                    const layers = box.querySelector('[name="layers"]').value;
+                    const theme = box.querySelector('[name="theme"]').value;
+                    const message =
+                      box.querySelector('[name="message"]').value ||
+                      "No message";
+                    const delivery =
+                      box.querySelector('[name="delivery"]').value;
+                    const deliveryTime = box.querySelector(
+                      '[name="deliveryTime"]'
+                    ).value;
+
+                    cakeSummaries.push(
+                      `Cake ${
+                        i + 1
+                      }: ${flavor} (${size}, ${layers} layers, "${theme}" theme) - Message: "${message}" - Delivery: ${delivery} at ${deliveryTime}`
+                    );
+                  });
+
+                  const totalPrice = calculateAllBills();
+
+                  // ✅ Summary ko hidden fields me set karo
+                  document.getElementById("cakeSummaryField").value =
+                    cakeSummaries.join("\n");
+                  document.getElementById(
+                    "billSummaryField"
+                  ).value = `Total Price: Rs. ${totalPrice}`;
+
+                  // ✅ Confirmation Message aur scroll
+                  confirmationMessage.style.display = "block";
+                  const yOffset = -80;
+                  const y =
+                    confirmationMessage.getBoundingClientRect().top +
+                    window.pageYOffset +
+                    yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+
+                  confirmationMessage.innerHTML = `
+    <strong>🧁 Order Summary:</strong><br>
+    ${cakeSummaries.join("<br>")}
+    <br><br><strong>Total Price:</strong> Rs. ${totalPrice}
+    <br><br>🎉 Your order has been placed successfully! We'll contact you soon.
+  `;
+
+                  // ✅ Actual form submit karo ab (kyunki JS se prevent kia tha)
+                  setTimeout(() => {
+                    window.location.href = "index.html";
+                  }, 30000); // seconds delay so user sees the confirmation message
+                });
+              });
+            </script>
+
+            <!-- 👤 Customer Info -->
+            <div class="form-box">
+              <h3>Customer Info & Payment</h3>
+
+              <label>Full Name:</label>
+              <input type="text" name="name" required />
+
+              <label>WhatsApp Number:</label>
+              <input
+                type="tel"
+                name="phone"
+                pattern="[0-9]{11}"
+                placeholder="03xxxxxxxxx"
+                required
+              />
+
+              <label>Email Address:</label>
+              <input
+                type="email"
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                placeholder="example@email.com"
+                required
+              />
+
+              <label>Delivery Address:</label>
+              <textarea
+                name="address"
+                rows="3"
+                placeholder="Street, City, Area"
+                required
+              ></textarea>
+
+              <!-- 💰 Bill Summary -->
+              <div class="form-box" id="bill-summary-box">
+                <h3>Bill Summary</h3>
+                <p>
+                  <strong>Cake Base Price:</strong> Rs.
+                  <span id="basePrice">0</span>
+                </p>
+                <p>
+                  <strong>Layers Charge:</strong> Rs.
+                  <span id="layerPrice">0</span>
+                </p>
+                <p>
+                  <strong>Total:</strong> Rs. <span id="totalPrice">0</span>
+                </p>
+              </div>
+              <div class="payment-box">
+                <h3>Payment Instructions</h3>
+                <p>
+                  <strong
+                    >To proceed with your payment, please use the details
+                    below:</strong
+                  >
+                </p>
+                <ul>
+                  <li>💸 <strong>Payment Method:</strong> JazzCash</li>
+                  <li>📱 <strong>Account Number:</strong> 0330 3250069</li>
+                  <li>👩‍💼 <strong>Account Title:</strong> Benish Iram</li>
+                </ul>
+              </div>
+
+              <div class="confirmation-box">
+                <h3>Payment Confirmation</h3>
+                <p>
+                  <strong>To confirm your order, please provide the following payment details:</strong>
+                </p>
+
+                <label for="payerName">Your Account Title:</label>
+                <input
+                  type="text"
+                  id="payerName"
+                  name="payerName"
+                  placeholder="Enter your account title"
+                  required
+                />
+
+                <label for="receiptUpload">Upload Payment Receipt:</label>
+                <input
+                  type="file"
+                  id="receiptUpload"
+                  name="receiptUpload"
+                  accept="image/*,application/pdf"
+                  required
+                />
+              </div>
+
+              <input type="checkbox" required /> I agree to the
+              <a href="#">terms and conditions</a>.
+
+              <br /><br />
+              <button type="submit" class="btn">Place Order</button>
+            </div>
+          </form>
+
+          <p
+            id="confirmationMessage"
+            style="color: rgb(192, 86, 144); margin-top: 10px"
+          ></p>
+        </section>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="aboutsection">
+      <section class="sections" id="about">
+        <h2>Welcome to Cake Blossom</h2>
+
+        <p>
+          At <strong>Cake Blossom</strong>, every cake is a story waiting to be
+          told. From birthdays to weddings, and every little celebration in
+          between — we craft cakes that bring joy, beauty, and delicious
+          memories.
+        </p>
+
+        <p>
+          Our mission is simple: to spread happiness through the magic of
+          baking. We believe a cake is not just dessert — it’s a heartfelt
+          expression, a center of celebration, and a forever memory.
+        </p>
+
+        <h3>Our Vision</h3>
+        <p>
+          To become the go-to name for customized celebration cakes in the city
+          — known for creativity, quality, and emotional connection.
+        </p>
+
+        <h3>Meet the Heart Behind the Whisk</h3>
+
+        <p>
+          <strong>Benish Iram</strong>, a 22-year-old passionate baker, started
+          <strong>Cake Blossom</strong> with a dream and a spatula. From baking
+          in her tiny kitchen to serving hundreds of happy customers, she
+          believes that love and art can be felt in every bite.
+        </p>
+
+        <p>
+          Her goal? To make people feel seen, celebrated, and loved — one
+          handcrafted cake at a time. Every flower you see on a cake, every
+          color chosen, every message written — is done with intention and care.
+        </p>
+
+        <h3>What Makes Us Special</h3>
+        <ul>
+          <li>✨ Custom-made designs, personalized for each customer</li>
+          <li>🎂 Always fresh, premium-quality ingredients</li>
+          <li>🌸 Aesthetic cakes made with artistic detail</li>
+          <li>💗 100% love and hygiene guaranteed</li>
+          <li>🕒 On-time delivery and smooth customer experience</li>
+        </ul>
+
+        <h3>Fun Facts</h3>
+        <ul>
+          <li>🎉 First ever cake made: A pink rosette birthday cake</li>
+          <li>🍫 Most popular flavor: Chocolate fudge</li>
+          <li>🎁 Secret ingredient: A little extra love in every batter 😉</li>
+        </ul>
+
+        <h3>Our Promise to You</h3>
+        <p>
+          When you choose Cake Blossom, you don’t just order a cake — you start
+          a memory. We promise attention to detail, open communication, and a
+          sweet experience from start to finish.
+        </p>
+
+        <p>
+          <em
+            >Let us be a part of your special moments — and turn them into
+            something unforgettable.</em
+          >
+        </p>
+      </section>
+    </div>
+
+
+    <!--Contact Section-->
+    <section class="section" id="contact">
+      <h2>Contact Us</h2>
+      <form id="whatsappForm">
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          required
+        /><br /><br />
+        <input
+          type="email"
+          id="email"
+          placeholder="Email"
+          required
+        /><br /><br />
+        <textarea
+          id="message"
+          placeholder="Message"
+          rows="4"
+          required
+        ></textarea
+        ><br /><br />
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <br />
+    </section>
+    <!-- whatsapp Contact js-->
+    <script>
+      document
+        .getElementById("whatsappForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // prevent default form submission
+
+          // Get form values
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          // Create WhatsApp message
+          const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Message:* ${message}`;
+
+          // WhatsApp API link with your number
+          const whatsappURL = `https://wa.me/923303250069?text=${whatsappMessage}`;
+
+          // Open WhatsApp
+          window.open(whatsappURL, "_blank");
+        });
+    </script>
+
+    <!-- Lightbox HTML -->
+    <div
+      id="lightbox"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        flex-direction: column;
+      "
+    >
+      <span
+        id="closeBtn"
+        style="
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          font-size: 40px;
+          color: white;
+          cursor: pointer;
+        "
+        >&times;</span
+      >
+
+      <img
+        id="lightbox-img"
+        src=""
+        alt="Enlarged Cake"
+        style="
+          max-width: 80%;
+          max-height: 80%;
+          border: 5px solid white;
+          border-radius: 10px;
+        "
+      />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© <span id="year"></span> Cake Blossom. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+
+  </body>
+</html>

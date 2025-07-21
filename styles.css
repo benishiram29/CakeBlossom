@@ -1,0 +1,555 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  background: #ffc0cb;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+nav {
+  background: linear-gradient(to bottom, #ffc0cb, white);
+  display: flex;
+  padding: 10px 0;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+nav a {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(253, 0, 118);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+nav a.hover-effect {
+  color: rgb(252, 126, 185);
+  text-shadow: 1px 1px 2px white;
+}
+
+nav a.active {
+  color: rgb(252, 126, 185);
+  text-shadow: 1px 1px 2px white;
+  border-bottom: 2px solid rgb(252, 126, 185);
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.hero {
+  background: url("bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -20px;
+}
+
+#home h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  background: rgba(255, 192, 203, 0.6);
+  padding: 10px;
+}
+#cakes h2,
+#shop h2,
+#about h2,
+#contact h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  padding: 10px;
+  color: rgb(253, 0, 118);
+}
+
+.btn {
+  font-size: 1rem;
+  background: rgb(253, 84, 163);
+  color: white;
+  border: 2px solid rgb(253, 84, 163);
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.btn:hover {
+  background: white;
+  color: rgb(253, 84, 163);
+  border: 2px solid rgb(253, 84, 163);
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  border: 1px solid #ffd1dc;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff0f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+.product img {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.cake-box {
+  margin-bottom: 20px;
+  border: 1px solid #ffc0cb;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #fff7fa;
+}
+
+.cakes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+}
+
+.cake-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cake-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(123, 77, 255, 0.3);
+}
+
+.cake-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cake-info {
+  padding: 15px;
+}
+
+.cake-info h3 {
+  margin: 0 0 10px;
+  color: #7b4dff;
+}
+
+#cakeOrderForm h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem !important;
+  color: rgb(253, 0, 118) !important;
+  margin-bottom: 20px;
+}
+
+.cake-info p {
+  margin: 0 0 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.cake-info .price {
+  font-weight: bold;
+  color: #4a2c83;
+  font-size: 16px;
+}
+
+#addCakeBtn {
+  margin-bottom: 30px;
+}
+
+#confirmationMessage {
+  display: none; /* Hide by default */
+  background-color: #fff0f5;
+  border: 2px dashed #ff69b4;
+  color: #c71585;
+  padding: 20px 25px;
+  margin-top: 30px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.2);
+  text-align: center;
+  animation: fadeInSlide 0.6s ease-in-out;
+}
+
+#confirmationMessage strong {
+  color: #d0006f;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #f1f1f1;
+}
+
+.shop-body {
+  padding: 40px 20px;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form select,
+form input,
+form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: vertical;
+  /* only textarea will resize vertically */
+}
+
+#whatsappForm input{
+  margin-top: 20px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-box h3 {
+  margin-top: 0;
+  color: #ff69b4;
+  font-size: 20px;
+}
+
+.form-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#bill-summary-box {
+  background: #fff0f6;
+  border: 1px solid #ffb6d5;
+}
+
+.sections {
+  background: #fff0f5;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #6a1b4d;
+}
+#contact {
+  background: linear-gradient(to bottom, white, #ffc0cb);
+}
+#about {
+  background: linear-gradient(to bottom, #ffc0cb, white);
+}
+
+#about {
+  max-width: 1000px !important;
+}
+.shopsection {
+  background: linear-gradient(to bottom, white, #ffc0cb);
+  margin-bottom: 0; /* Ensure no extra space below */
+  padding-bottom: 20px; /* You can reduce or increase this */
+}
+.shopsection h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  color: rgb(253, 0, 118);
+  margin-bottom: 15px;
+}
+
+.payment-box,
+.confirmation-box {
+  background-color: #fff7fa;
+  border: 1px dashed #ffb6d5;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.1);
+  color: #6a1b4d;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-box h3,
+.confirmation-box h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: rgb(253, 0, 118);
+  margin-bottom: 15px;
+}
+
+.payment-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-box ul li {
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+.confirmation-box input[type="text"],
+.confirmation-box input[type="file"] {
+  padding: 10px;
+  margin: 10px 0 20px;
+  width: 100%;
+  border: 1px solid #ffc0cb;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fff0f6;
+}
+
+.aboutsection {
+  background: linear-gradient(to bottom, #ffc0cb, white);
+  margin-top: 0; /* Prevent extra gap from top */
+  padding-top: 20px; /* Adjust as needed */
+}
+.aboutsection h2 {
+  text-align: center;
+}
+.cakesection {
+  background: linear-gradient(to bottom, #ffc0cb, white);
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border: 1px solid #ffb6c1;
+}
+
+footer {
+  background: linear-gradient(to bottom, #ffc0cb, white);
+  color: rgb(253, 0, 118);
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001;
+  position: relative;
+}
+
+
+/* ✅ Mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+
+#home{
+  height: 100vh;
+}
+
+  nav {
+  
+    transform: translateX(-100%); /* Hidden to left */
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    padding-top: -80px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    z-index: 999;
+    flex-direction: column;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    
+
+    
+  }
+  nav a {
+    padding: 10px 10px;
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+
+  }
+
+  nav.show {
+    transform: translateX(0); /* 👈 Slide in */
+
+  }
+
+
+  
+  #navMenu a:hover {
+    background: rgba(255, 192, 203, 0.2);
+    color: rgb(252, 126, 185);
+  }
+
+  #navMenu a.active {
+    background: rgba(255, 192, 203, 0.3);
+    color: rgb(252, 126, 185);
+    border-left: 4px solid rgb(252, 126, 185);
+  }
+
+
+  header {
+    position: fixed;
+    width: 100%;
+  }
+
+
+  header h1 {
+    font-size: 2rem;
+  }
+  
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  
+}
+
