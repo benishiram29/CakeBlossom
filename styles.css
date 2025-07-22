@@ -302,14 +302,7 @@ nav a.active {
   padding: 40px 20px;
 }
 
-form {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  max-width: 1000px;
-  margin: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+
 
 form select,
 form input,
@@ -348,13 +341,7 @@ form label {
   font-size: 20px;
 }
 
-.form-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
+
 
 #bill-summary-box {
   background: #fff0f6;
@@ -455,6 +442,17 @@ textarea:invalid {
   border: 1px solid #ffb6c1;
 }
 
+#whatsappForm {
+  width: 100%;
+  max-width: 1000px; /* You can reduce it to 400px or 350px if you want it smaller */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
 footer {
   background: linear-gradient(to bottom, #ffc0cb, white);
   color: rgb(253, 0, 118);
@@ -476,6 +474,10 @@ footer {
 
 /* ✅ Mobile view */
 @media (max-width: 768px) {
+
+  body{
+    overflow-x: hidden;
+  }
   .hamburger {
     display: block;
     cursor: pointer;
@@ -572,7 +574,29 @@ footer {
     font-size: 2rem;
   }
 
-  
+  #whatsappForm {
+  width: 100%;
+  max-width: 400px !important; 
+
+}
+
   
 }
 
+@media (min-width: 768px) ,(max-width: 1200px) {
+
+  body{
+    overflow-x: hidden;
+  }
+ #whatsappForm {
+  width: 100%;
+  max-width: 500px; /* Adjusted for smaller screens */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+}
