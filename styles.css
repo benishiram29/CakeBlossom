@@ -88,14 +88,14 @@ nav a.active {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding-top: 80px;
+  margin-top: -20px;
 }
 
 #home h2 {
   font-family: "Great Vibes", cursive;
   font-size: 3rem;
   background: rgba(255, 192, 203, 0.6);
-  padding: 10px;
+
 }
 #cakes h2,
 #shop h2,
@@ -551,12 +551,7 @@ h2{
     color: rgb(252, 126, 185);
   }
 
-  #navMenu a.active {
-    background: rgba(255, 192, 203, 0.3);
-    color: rgb(252, 126, 185);
-    border-left: 4px solid rgb(252, 126, 185);
-  }
-
+ 
 
   header {
     position: fixed;
@@ -589,7 +584,7 @@ h2{
   }
   #whatsappForm {
   width: 100%;
-  max-width: 400px !important; 
+  max-width: 300px !important; 
 
 }
 
