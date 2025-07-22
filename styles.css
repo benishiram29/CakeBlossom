@@ -7,6 +7,7 @@ body {
   margin: 0;
   background: #fff;
   color: #333;
+  overflow-x: hidden;
 }
 
 header {
@@ -536,7 +537,10 @@ footer {
 
   }
 
-
+h2{
+  
+    font-size: 2rem !important
+}
   
   #navMenu a:hover {
     background: rgba(255, 192, 203, 0.2);
@@ -573,7 +577,9 @@ footer {
   .logo-text {
     font-size: 2rem;
   }
-
+  .shop-body {
+    padding: 10px;
+  }
   #whatsappForm {
   width: 100%;
   max-width: 400px !important; 
