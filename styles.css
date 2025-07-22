@@ -106,7 +106,9 @@ nav a.active {
   padding: 10px;
   color: rgb(253, 0, 118);
 }
-
+h2{
+  margin-top: 60px;
+}
 .btn {
   font-size: 1rem;
   background: rgb(253, 84, 163);
