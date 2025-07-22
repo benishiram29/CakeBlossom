@@ -359,18 +359,7 @@
                   required
                 />
 
-                <img
-                  id="previewImage"
-                  src=""
-                  alt="Preview"
-                  style="
-                    display: none;
-                    margin-top: 10px;
-                    max-width: 200px;
-                    border: 2px dashed #ccc;
-                    border-radius: 8px;
-                  "
-                />
+               
 
                 <label>Message on Cake:</label>
                 <input type="text" name="message" maxlength="40" />
@@ -434,32 +423,45 @@
                 };
                 const pricePerExtraLayer = 300;
 
-                function calculateAllBills() {
-                  let totalBase = 0;
-                  let totalLayers = 0;
+              function calculateAllBills() {
+  let totalBase = 0;
+  let totalLayers = 0;
+  let cakeDetails = [];
 
-                  const cakeBoxes = cakeContainer.querySelectorAll(".cake-box");
+  const cakeBoxes = cakeContainer.querySelectorAll(".cake-box");
 
-                  cakeBoxes.forEach((box) => {
-                    const size = box.querySelector('[name="size"]').value;
-                    const layers =
-                      parseInt(box.querySelector('[name="layers"]').value) || 1;
+  cakeBoxes.forEach((box, index) => {
+    const size = box.querySelector('[name="size"]').value;
+    const layers = parseInt(box.querySelector('[name="layers"]').value) || 1;
+    const flavor = box.querySelector('[name="flavor"]').value;
 
-                    const base = pricePerSize[size] || 0;
-                    const layerCharge =
-                      layers >= 3 ? (layers - 2) * pricePerExtraLayer : 0;
+    const base = pricePerSize[size] || 0;
+    const extraLayers = layers >= 3 ? layers - 2 : 0;
+    const layerCharge = extraLayers * pricePerExtraLayer;
+    const total = base + layerCharge;
 
-                    totalBase += base;
-                    totalLayers += layerCharge;
-                  });
+    totalBase += base;
+    totalLayers += layerCharge;
+    // Add details for each cake
+    cakeDetails.push(
+      `𝓒𝓪𝓴𝓮 ${index + 1}: ${flavor} (${size})<br>
+      • Base Price: Rs. ${base}<br>
+      • Extra Layers: ${extraLayers} x Rs. ${pricePerExtraLayer} = Rs. ${layerCharge}<br>
+      ⤷ Total: Rs. ${total}`
+    );
+  });
 
-                  const total = totalBase + totalLayers;
-                  basePriceSpan.textContent = totalBase;
-                  layerPriceSpan.textContent = totalLayers;
-                  totalPriceSpan.textContent = total;
+  const total = totalBase + totalLayers;
+  basePriceSpan.textContent = totalBase;
+  layerPriceSpan.textContent = totalLayers;
+  totalPriceSpan.textContent = total;
 
-                  return total;
-                }
+  // Add details to a hidden div or field if you want to send in form
+  const detailedBreakdown = cakeDetails.join("<br><br>");
+  document.getElementById("detailedBreakdown").innerHTML = detailedBreakdown;
+
+  return total;
+}
 
                 // Event Listener for Add More Cake
                 addCakeBtn.addEventListener("click", () => {
@@ -668,12 +670,15 @@
                     yOffset;
                   window.scrollTo({ top: y, behavior: "smooth" });
 
-                  confirmationMessage.innerHTML = `
-    <strong>🧁 Order Summary:</strong><br>
-    ${cakeSummaries.join("<br>")}
-    <br><br><strong>Total Price:</strong> Rs. ${totalPrice}
-    <br><br>🎉 Your order has been placed successfully! We'll contact you soon.
-  `;
+            confirmationMessage.innerHTML = `
+  <strong>🧁 Order Summary:</strong><br>
+  ${cakeSummaries.join("<br><br>")}
+  <br><br><strong>Detailed Bill Breakdown:</strong><br>
+  ${document.getElementById("detailedBreakdown").innerHTML}
+  <br><br><strong>Total Price:</strong> Rs. ${totalPrice}
+  <br><br>🎉 Your order has been placed successfully! We'll contact you soon.
+`;
+
 
                   // ✅ Actual form submit karo ab (kyunki JS se prevent kia tha)
                   setTimeout(() => {
@@ -719,6 +724,7 @@
               <!-- 💰 Bill Summary -->
               <div class="form-box" id="bill-summary-box">
                 <h3>Bill Summary</h3>
+                <div id="detailedBreakdown" style="margin-top: 10px; font-family: 'Times New Roman', Times, serif; font-size: 18px; color: #333;"></div>
                 <p>
                   <strong>Cake Base Price:</strong> Rs.
                   <span id="basePrice">0</span>
@@ -727,10 +733,14 @@
                   <strong>Layers Charge:</strong> Rs.
                   <span id="layerPrice">0</span>
                 </p>
-                <p>
-                  <strong>Total:</strong> Rs. <span id="totalPrice">0</span>
+                     
+                <p>   
+                  <strong>🧾 Grand Total:</strong> Rs. <span id="totalPrice">0</span>
                 </p>
+                
               </div>
+         
+              <!-- 💳 Payment Instructions -->
               <div class="payment-box">
                 <h3>Payment Instructions</h3>
                 <p>
