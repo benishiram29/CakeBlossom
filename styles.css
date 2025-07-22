@@ -585,6 +585,9 @@ h2{
   #whatsappForm {
   width: 100%;
   max-width: 300px !important; 
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px;
+  
 
 }
 
