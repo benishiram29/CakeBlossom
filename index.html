@@ -25,7 +25,7 @@
 <!--<meta name="twitter:site" content="@cakeblossom" />  Optional, if you have Twitter handle -->
 
 <!-- Favicon (optional but good for branding) -->
-<link rel="icon" type="image/png" href="logo.png" /> 
+<link rel="icon" href="logo.png" type="image/png">
     <meta name="theme-color" content="#f8f0e3" />
     <title>Home | Cake Blossom</title>
     <link rel="stylesheet" href="styles.css" />
@@ -55,6 +55,7 @@
 <div id="overlay" onclick="closeMenu()"></div>
 <!-- Navigation Menu -->
 <nav id="navMenu">
+  
   <a href="#home">Home</a>
   <a href="#cakes">Our Cakes</a>
   <a href="#shop">Shop</a>
@@ -311,7 +312,7 @@
 
           <form
             id="cakeOrderForm"
-            action="https://formsubmit.co/infoCakeBlossom@gmail.com"
+            action="https://formsubmit.co/infocakeblossom@gmail.com"
             method="POST"
             enctype="multipart/form-data"
           >
@@ -379,8 +380,10 @@
             <script>
               // ✅ Disable past dates
               const dateInput = document.getElementById("deliveryDate");
-              const today = new Date().toISOString().split("T")[0];
-              dateInput.min = today;
+          const today = new Date();
+today.setDate(today.getDate() + 3); // ✅ adds 3 days
+const minDate = today.toISOString().split("T")[0];
+dateInput.min = minDate;
 
               // ✅ Validate time between 12 PM to 12 AM
               const timeInput = document.getElementById("deliveryTime");
@@ -671,18 +674,19 @@
                   window.scrollTo({ top: y, behavior: "smooth" });
 
             confirmationMessage.innerHTML = `
-  <strong>🧁 Order Summary:</strong><br>
+  <strong>ThankYou🎉<br>🧁 Order Summary:</strong><br>
   ${cakeSummaries.join("<br><br>")}
   <br><br><strong>Detailed Bill Breakdown:</strong><br>
   ${document.getElementById("detailedBreakdown").innerHTML}
   <br><br><strong>Total Price:</strong> Rs. ${totalPrice}
   <br><br>🎉 Your order has been placed successfully! We'll contact you soon.
+   <br><br><strong><em>📸 Please take a screenshot of this confirmation for your reference.</strong></em>
 `;
 
 
                   // ✅ Actual form submit karo ab (kyunki JS se prevent kia tha)
                   setTimeout(() => {
-                    window.location.href = "index.html";
+                    form.submit(); // ✅ Actually submit the form to formsubmit.co
                   }, 30000); // seconds delay so user sees the confirmation message
                 });
               });
@@ -786,6 +790,11 @@
               <br /><br />
               <button type="submit" class="btn">Place Order</button>
             </div>
+        <input type="hidden" name="_next" value="https://benishiram29.github.io/CakeBlossom/index.html#shop" />
+
+
+
+
           </form>
 
           <p
@@ -870,7 +879,13 @@
 
     <!--Contact Section-->
     <section class="section" id="contact">
-      <h2>Contact Us</h2>
+    
+      <h2>Get in Touch with Us</h2>
+<p>
+  Have a question about your order? Want a custom cake design or just want to say hi?  
+  We’re just a message away! Fill out the form or use the details below to reach out.
+</p>
+
       <form id="whatsappForm">
         <input
           type="text"
@@ -894,6 +909,30 @@
         <button class="btn" type="submit">Send</button>
       </form>
       <br />
+      <div class="contact-details">
+  <h3>Contact Information</h3>
+  <ul>
+    <li>📞 Phone: <a href="tel:+923332335482">0333-2335482</a></li>
+    <li>📧 Email: <a href="mailto:infocakeblossom@gmail.com">infocakeblossom@gmail.com</a></li>
+    <li>📍 Location: Karachi, Pakistan</li>
+  </ul>
+  
+</div>
+
+  <div class="contact-details">
+  <div class="social-links">
+  <h3>Follow Us</h3>
+  <a href="https://www.instagram.com/yourpage" target="_blank">📷 Instagram</a> |
+  <a href="https://wa.me/923303250069" target="_blank">📱 WhatsApp</a>
+</div>
+</div>
+<p>
+  💬 We love hearing from you! Whether it’s feedback, appreciation, or suggestions — your voice matters and helps us bake better.
+</p>
+
+
+
+
     </section>
     <!-- whatsapp Contact js-->
     <script>

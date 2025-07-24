@@ -472,6 +472,65 @@ textarea:invalid {
 }
 
 
+.contact-details {
+  background-color: #fff0f5;
+  border: 1px solid #ffc0cb;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #6a1b4d;
+  text-align: center;
+}
+
+.contact-details h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  color: rgb(253, 0, 118);
+  margin-bottom: 20px;
+  text-align: center;
+}
+#contact p{
+  font-size: 1.2rem;
+  color: #6a1b4d;
+  margin-bottom: 20px;
+  text-align: center;
+font-weight: bold;
+width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.contact-details ul {
+  font-family: 'Times New Roman', Times, serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-details li {
+  padding: 8px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-details a {
+  
+  color: #d0006f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #ff69b4;
+  text-decoration: underline;
+}
+
+
 footer {
   background: linear-gradient(to bottom, #ffc0cb, white);
   color: rgb(253, 0, 118);
@@ -489,10 +548,20 @@ footer {
   z-index: 1001;
   position: relative;
 }
+.menu-header{
+  display: none;
+
+}
 
 
 /* ✅ Mobile view */
 @media (max-width: 768px) {
+
+.menu-header{
+  display: block;
+
+  
+}
 
   body{
     overflow-x: hidden;
@@ -571,6 +640,7 @@ nav a.active {
 }
  
 
+
   header {
     position: fixed;
     width: 100%;
@@ -594,6 +664,8 @@ nav a.active {
   .logo-text {
     font-size: 2rem;
   }
+
+  
   .shop-body {
     padding: 10px;
   }
